@@ -13,8 +13,7 @@ namespace WinForms_Clicker_Game
         public int CurrentMoney { get; set; }
         public int TotalMoney { get; set; }
         public List<ClickerBooster> ClickerBoosters { get; set; }
-        public int ClickerMultiplier { get; set; }
-
+        public List<FarmerBooster> FarmerBoosters { get; set; }
 
         public event Action PlayerMadeAction;
 
@@ -22,29 +21,33 @@ namespace WinForms_Clicker_Game
         {
             Name = name;
             ClickerBoosters = new List<ClickerBooster>();
+            FarmerBoosters = new List<FarmerBooster>();
         }
 
-        public void AddMoneyByClick(int amount)
+        private void AddMoney<TBooster>(List <TBooster> boosters, int moneyAmount) where TBooster : Booster
         {
-            ClickerMultiplier = 1;
+            var multiplier = 1;
+            var boostersCopy = new List<TBooster>(boosters);
 
-            var boostersCopy = new List<ClickerBooster>(ClickerBoosters);
-
-            foreach (var clikerBooster in boostersCopy)
+            foreach (var booster in boostersCopy)
             {
-                ClickerMultiplier *= clikerBooster.UseBooster(this);
+                multiplier *= booster.UseBooster(this);
             }
 
-            int totalMoney = amount * ClickerMultiplier;
+            int totalMoney = moneyAmount * multiplier;
             CurrentMoney += totalMoney;
             TotalMoney += totalMoney;
             PlayerMadeAction?.Invoke();
         }
+
+        public void AddMoneyByClick(int amount)
+        {
+            AddMoney(ClickerBoosters, amount);
+        }
+
         public void AddMoneyByFarmers(int amount)
         {
-            CurrentMoney += amount;
-            TotalMoney += amount;
-            PlayerMadeAction?.Invoke();
+            AddMoney(FarmerBoosters, amount);
         }
     }
 }

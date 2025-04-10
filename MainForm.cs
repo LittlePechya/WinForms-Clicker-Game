@@ -77,6 +77,10 @@ namespace WinForms_Clicker_Game
             boosters.Add(quadroClickBooster);
             boosterUIs.Add(new BoosterUI(quadroClickBooster, QuadroClickActiveStatus, QuadroClickPrice, QuadroClickBuyButton));
 
+            var doubleFarmerBooster = new DoubleFarmerBooster();
+            boosters.Add(doubleFarmerBooster);
+            boosterUIs.Add(new BoosterUI(doubleFarmerBooster, DoubleFarmerBoosterActiveStatus, DoubleFarmerBoosterPrice, DoubleFarmerBoosterBuyButton));
+
             foreach (var boosterUI in boosterUIs)
             {
                 boosterUI.BuyButton.Click += (s, e) => boosterUI.Booster.BuyBooster(player);

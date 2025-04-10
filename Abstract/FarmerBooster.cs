@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace WinForms_Clicker_Game.Abstract
 {
-    public abstract class ClickerBooster : Booster
+    public abstract class FarmerBooster : Booster
     {
-        
-        public int ClickMultiplier { get; set; }
-
-        public ClickerBooster(string name, int price, int usagesCount, int clickMultiplier)
-        : base(name, price)
+        public int FarmerIncomeMultiplier { get; set; }
+        public FarmerBooster(string name, int price, int usagesCount, int farmerIncomeMultiplier)
+            : base(name, price)
         {
             UsagesCount = usagesCount;
             UsagesLeft = usagesCount;
-            ClickMultiplier = clickMultiplier;
+            FarmerIncomeMultiplier = farmerIncomeMultiplier;
         }
 
         public override int UseBooster(Player player)
@@ -25,7 +23,7 @@ namespace WinForms_Clicker_Game.Abstract
             {
                 UsagesLeft--;
                 BoosterChanged();
-                return ClickMultiplier;
+                return FarmerIncomeMultiplier;
             }
             else
             {
@@ -37,21 +35,21 @@ namespace WinForms_Clicker_Game.Abstract
         public override bool BuyBooster(Player player)
         {
             if (IsActive) return false;
-
             if (player.CurrentMoney < Price) return false;
 
             player.CurrentMoney -= Price;
             UsagesLeft = UsagesCount;
             IsActive = true;
-            player.ClickerBoosters.Add(this);
+            player.FarmerBoosters.Add(this);
             BoosterChanged();
             return true;
+
         }
 
         public override void DeactivateBooster(Player player)
         {
             IsActive = false;
-            player.ClickerBoosters.Remove(this);
+            player.FarmerBoosters.Remove(this);
             BoosterChanged();
         }
     }

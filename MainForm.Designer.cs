@@ -33,6 +33,12 @@
             this.CurrentMoneyTextBox = new System.Windows.Forms.TextBox();
             this.TotalMoneyTextBox = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.QuadroClickPrice = new System.Windows.Forms.Label();
+            this.QuadroClickDescription = new System.Windows.Forms.Label();
+            this.QuadroClickName = new System.Windows.Forms.Label();
+            this.QuadroClickActiveStatus = new System.Windows.Forms.Label();
+            this.QuadroClickBuyButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DoubleClickPrice = new System.Windows.Forms.Label();
             this.DoubleClickDescription = new System.Windows.Forms.Label();
@@ -52,18 +58,19 @@
             this.AutoClickerName = new System.Windows.Forms.Label();
             this.AutoClickerLevel = new System.Windows.Forms.Label();
             this.AutoClickerBuyButton = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.QuadroClickPrice = new System.Windows.Forms.Label();
-            this.QuadroClickDescription = new System.Windows.Forms.Label();
-            this.QuadroClickName = new System.Windows.Forms.Label();
-            this.QuadroClickActiveStatus = new System.Windows.Forms.Label();
-            this.QuadroClickBuyButton = new System.Windows.Forms.Button();
+            this.DoubleFarmerBoosterPanel = new System.Windows.Forms.Panel();
+            this.DoubleFarmerBoosterPrice = new System.Windows.Forms.Label();
+            this.DoubleFarmerBoosterDescription = new System.Windows.Forms.Label();
+            this.DoubleFarmerBoosterName = new System.Windows.Forms.Label();
+            this.DoubleFarmerBoosterActiveStatus = new System.Windows.Forms.Label();
+            this.DoubleFarmerBoosterBuyButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.DoubleFarmerBoosterPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // clicker
@@ -111,6 +118,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.DoubleFarmerBoosterPanel);
             this.groupBox1.Controls.Add(this.panel4);
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Font = new System.Drawing.Font("Pixelify Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -120,6 +128,65 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Boosters";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.QuadroClickPrice);
+            this.panel4.Controls.Add(this.QuadroClickDescription);
+            this.panel4.Controls.Add(this.QuadroClickName);
+            this.panel4.Controls.Add(this.QuadroClickActiveStatus);
+            this.panel4.Controls.Add(this.QuadroClickBuyButton);
+            this.panel4.Location = new System.Drawing.Point(6, 173);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(300, 131);
+            this.panel4.TabIndex = 6;
+            // 
+            // QuadroClickPrice
+            // 
+            this.QuadroClickPrice.AutoSize = true;
+            this.QuadroClickPrice.Font = new System.Drawing.Font("Pixelify Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.QuadroClickPrice.Location = new System.Drawing.Point(6, 97);
+            this.QuadroClickPrice.Name = "QuadroClickPrice";
+            this.QuadroClickPrice.Size = new System.Drawing.Size(69, 21);
+            this.QuadroClickPrice.TabIndex = 5;
+            this.QuadroClickPrice.Text = "Price: $";
+            // 
+            // QuadroClickDescription
+            // 
+            this.QuadroClickDescription.Font = new System.Drawing.Font("Pixelify Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.QuadroClickDescription.Location = new System.Drawing.Point(4, 49);
+            this.QuadroClickDescription.Name = "QuadroClickDescription";
+            this.QuadroClickDescription.Size = new System.Drawing.Size(173, 48);
+            this.QuadroClickDescription.TabIndex = 3;
+            this.QuadroClickDescription.Text = "It\'s like double click, but better";
+            // 
+            // QuadroClickName
+            // 
+            this.QuadroClickName.AutoSize = true;
+            this.QuadroClickName.Location = new System.Drawing.Point(3, 12);
+            this.QuadroClickName.Name = "QuadroClickName";
+            this.QuadroClickName.Size = new System.Drawing.Size(145, 28);
+            this.QuadroClickName.TabIndex = 2;
+            this.QuadroClickName.Text = "Quadro Click";
+            // 
+            // QuadroClickActiveStatus
+            // 
+            this.QuadroClickActiveStatus.Font = new System.Drawing.Font("Pixelify Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.QuadroClickActiveStatus.Location = new System.Drawing.Point(180, 3);
+            this.QuadroClickActiveStatus.Name = "QuadroClickActiveStatus";
+            this.QuadroClickActiveStatus.Size = new System.Drawing.Size(117, 51);
+            this.QuadroClickActiveStatus.TabIndex = 1;
+            this.QuadroClickActiveStatus.Text = "Inactive";
+            this.QuadroClickActiveStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // QuadroClickBuyButton
+            // 
+            this.QuadroClickBuyButton.Location = new System.Drawing.Point(184, 70);
+            this.QuadroClickBuyButton.Name = "QuadroClickBuyButton";
+            this.QuadroClickBuyButton.Size = new System.Drawing.Size(100, 48);
+            this.QuadroClickBuyButton.TabIndex = 0;
+            this.QuadroClickBuyButton.Text = "Buy";
+            this.QuadroClickBuyButton.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -308,64 +375,64 @@
             this.AutoClickerBuyButton.Text = "Buy";
             this.AutoClickerBuyButton.UseVisualStyleBackColor = true;
             // 
-            // panel4
+            // DoubleFarmerBoosterPanel
             // 
-            this.panel4.Controls.Add(this.QuadroClickPrice);
-            this.panel4.Controls.Add(this.QuadroClickDescription);
-            this.panel4.Controls.Add(this.QuadroClickName);
-            this.panel4.Controls.Add(this.QuadroClickActiveStatus);
-            this.panel4.Controls.Add(this.QuadroClickBuyButton);
-            this.panel4.Location = new System.Drawing.Point(6, 173);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(300, 136);
-            this.panel4.TabIndex = 6;
+            this.DoubleFarmerBoosterPanel.Controls.Add(this.DoubleFarmerBoosterPrice);
+            this.DoubleFarmerBoosterPanel.Controls.Add(this.DoubleFarmerBoosterDescription);
+            this.DoubleFarmerBoosterPanel.Controls.Add(this.DoubleFarmerBoosterName);
+            this.DoubleFarmerBoosterPanel.Controls.Add(this.DoubleFarmerBoosterActiveStatus);
+            this.DoubleFarmerBoosterPanel.Controls.Add(this.DoubleFarmerBoosterBuyButton);
+            this.DoubleFarmerBoosterPanel.Location = new System.Drawing.Point(6, 308);
+            this.DoubleFarmerBoosterPanel.Name = "DoubleFarmerBoosterPanel";
+            this.DoubleFarmerBoosterPanel.Size = new System.Drawing.Size(300, 131);
+            this.DoubleFarmerBoosterPanel.TabIndex = 7;
             // 
-            // QuadroClickPrice
+            // DoubleFarmerBoosterPrice
             // 
-            this.QuadroClickPrice.AutoSize = true;
-            this.QuadroClickPrice.Font = new System.Drawing.Font("Pixelify Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.QuadroClickPrice.Location = new System.Drawing.Point(6, 97);
-            this.QuadroClickPrice.Name = "QuadroClickPrice";
-            this.QuadroClickPrice.Size = new System.Drawing.Size(69, 21);
-            this.QuadroClickPrice.TabIndex = 5;
-            this.QuadroClickPrice.Text = "Price: $";
+            this.DoubleFarmerBoosterPrice.AutoSize = true;
+            this.DoubleFarmerBoosterPrice.Font = new System.Drawing.Font("Pixelify Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DoubleFarmerBoosterPrice.Location = new System.Drawing.Point(6, 97);
+            this.DoubleFarmerBoosterPrice.Name = "DoubleFarmerBoosterPrice";
+            this.DoubleFarmerBoosterPrice.Size = new System.Drawing.Size(69, 21);
+            this.DoubleFarmerBoosterPrice.TabIndex = 5;
+            this.DoubleFarmerBoosterPrice.Text = "Price: $";
             // 
-            // QuadroClickDescription
+            // DoubleFarmerBoosterDescription
             // 
-            this.QuadroClickDescription.Font = new System.Drawing.Font("Pixelify Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.QuadroClickDescription.Location = new System.Drawing.Point(4, 49);
-            this.QuadroClickDescription.Name = "QuadroClickDescription";
-            this.QuadroClickDescription.Size = new System.Drawing.Size(173, 48);
-            this.QuadroClickDescription.TabIndex = 3;
-            this.QuadroClickDescription.Text = "It\'s like double click, but better";
+            this.DoubleFarmerBoosterDescription.Font = new System.Drawing.Font("Pixelify Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DoubleFarmerBoosterDescription.Location = new System.Drawing.Point(4, 49);
+            this.DoubleFarmerBoosterDescription.Name = "DoubleFarmerBoosterDescription";
+            this.DoubleFarmerBoosterDescription.Size = new System.Drawing.Size(173, 48);
+            this.DoubleFarmerBoosterDescription.TabIndex = 3;
+            this.DoubleFarmerBoosterDescription.Text = "Double income from farmers!";
             // 
-            // QuadroClickName
+            // DoubleFarmerBoosterName
             // 
-            this.QuadroClickName.AutoSize = true;
-            this.QuadroClickName.Location = new System.Drawing.Point(3, 12);
-            this.QuadroClickName.Name = "QuadroClickName";
-            this.QuadroClickName.Size = new System.Drawing.Size(145, 28);
-            this.QuadroClickName.TabIndex = 2;
-            this.QuadroClickName.Text = "Quadro Click";
+            this.DoubleFarmerBoosterName.AutoSize = true;
+            this.DoubleFarmerBoosterName.Location = new System.Drawing.Point(3, 12);
+            this.DoubleFarmerBoosterName.Name = "DoubleFarmerBoosterName";
+            this.DoubleFarmerBoosterName.Size = new System.Drawing.Size(170, 28);
+            this.DoubleFarmerBoosterName.TabIndex = 2;
+            this.DoubleFarmerBoosterName.Text = "Double Farmer";
             // 
-            // QuadroClickActiveStatus
+            // DoubleFarmerBoosterActiveStatus
             // 
-            this.QuadroClickActiveStatus.Font = new System.Drawing.Font("Pixelify Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.QuadroClickActiveStatus.Location = new System.Drawing.Point(180, 3);
-            this.QuadroClickActiveStatus.Name = "QuadroClickActiveStatus";
-            this.QuadroClickActiveStatus.Size = new System.Drawing.Size(117, 51);
-            this.QuadroClickActiveStatus.TabIndex = 1;
-            this.QuadroClickActiveStatus.Text = "Inactive";
-            this.QuadroClickActiveStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DoubleFarmerBoosterActiveStatus.Font = new System.Drawing.Font("Pixelify Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DoubleFarmerBoosterActiveStatus.Location = new System.Drawing.Point(180, 3);
+            this.DoubleFarmerBoosterActiveStatus.Name = "DoubleFarmerBoosterActiveStatus";
+            this.DoubleFarmerBoosterActiveStatus.Size = new System.Drawing.Size(117, 51);
+            this.DoubleFarmerBoosterActiveStatus.TabIndex = 1;
+            this.DoubleFarmerBoosterActiveStatus.Text = "Inactive";
+            this.DoubleFarmerBoosterActiveStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // QuadroClickBuyButton
+            // DoubleFarmerBoosterBuyButton
             // 
-            this.QuadroClickBuyButton.Location = new System.Drawing.Point(184, 70);
-            this.QuadroClickBuyButton.Name = "QuadroClickBuyButton";
-            this.QuadroClickBuyButton.Size = new System.Drawing.Size(100, 48);
-            this.QuadroClickBuyButton.TabIndex = 0;
-            this.QuadroClickBuyButton.Text = "Buy";
-            this.QuadroClickBuyButton.UseVisualStyleBackColor = true;
+            this.DoubleFarmerBoosterBuyButton.Location = new System.Drawing.Point(184, 70);
+            this.DoubleFarmerBoosterBuyButton.Name = "DoubleFarmerBoosterBuyButton";
+            this.DoubleFarmerBoosterBuyButton.Size = new System.Drawing.Size(100, 48);
+            this.DoubleFarmerBoosterBuyButton.TabIndex = 0;
+            this.DoubleFarmerBoosterBuyButton.Text = "Buy";
+            this.DoubleFarmerBoosterBuyButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -381,6 +448,8 @@
             this.Name = "MainForm";
             this.Text = "ClickerGame by LittlePechya";
             this.groupBox1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -388,8 +457,8 @@
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.DoubleFarmerBoosterPanel.ResumeLayout(false);
+            this.DoubleFarmerBoosterPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,5 +496,11 @@
         private System.Windows.Forms.Label QuadroClickName;
         private System.Windows.Forms.Label QuadroClickActiveStatus;
         private System.Windows.Forms.Button QuadroClickBuyButton;
+        private System.Windows.Forms.Panel DoubleFarmerBoosterPanel;
+        private System.Windows.Forms.Label DoubleFarmerBoosterPrice;
+        private System.Windows.Forms.Label DoubleFarmerBoosterDescription;
+        private System.Windows.Forms.Label DoubleFarmerBoosterName;
+        private System.Windows.Forms.Label DoubleFarmerBoosterActiveStatus;
+        private System.Windows.Forms.Button DoubleFarmerBoosterBuyButton;
     }
 }

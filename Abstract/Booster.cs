@@ -26,6 +26,7 @@ namespace WinForms_Clicker_Game.Abstract
             OnBoosterChanged?.Invoke();
         }
 
+        public abstract int UseBooster(Player player);
         public abstract bool BuyBooster(Player player);
         public abstract void DeactivateBooster(Player player);
     }

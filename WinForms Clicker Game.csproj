@@ -50,6 +50,7 @@
     <Compile Include="Abstract\ClickerBooster.cs" />
     <Compile Include="Abstract\FarmerBooster.cs" />
     <Compile Include="Boosters\DoubleClickBooster.cs" />
+    <Compile Include="Boosters\DoubleFarmerBooster.cs" />
     <Compile Include="Boosters\QuadroClickBooster.cs" />
     <Compile Include="ClickerButton.cs" />
     <Compile Include="Abstract\Farmer.cs" />
