@@ -12,16 +12,16 @@ namespace WinForms_Clicker_Game
         public string Name { get; set; }
         public int CurrentMoney { get; set; }
         public int TotalMoney { get; set; }
-        public List<ClickerBooster> ClickerBoosters { get; set; }
-        public List<FarmerBooster> FarmerBoosters { get; set; }
+        public List<Booster> ClickerBoosters { get; set; }
+        public List<Booster> FarmerBoosters { get; set; }
 
         public event Action PlayerMadeAction;
 
         public Player(string name)
         {
             Name = name;
-            ClickerBoosters = new List<ClickerBooster>();
-            FarmerBoosters = new List<FarmerBooster>();
+            ClickerBoosters = new List<Booster>();
+            FarmerBoosters = new List<Booster>();
         }
 
         private void AddMoney<TBooster>(List <TBooster> boosters, int moneyAmount) where TBooster : Booster

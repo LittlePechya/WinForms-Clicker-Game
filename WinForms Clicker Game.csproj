@@ -49,6 +49,7 @@
     <Compile Include="Abstract\Booster.cs" />
     <Compile Include="Abstract\ClickerBooster.cs" />
     <Compile Include="Abstract\FarmerBooster.cs" />
+    <Compile Include="Abstract\UsableBooster.cs" />
     <Compile Include="Boosters\DoubleClickBooster.cs" />
     <Compile Include="Boosters\DoubleFarmerBooster.cs" />
     <Compile Include="Boosters\QuadroClickBooster.cs" />
